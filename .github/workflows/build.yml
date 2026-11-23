@@ -1,0 +1,21 @@
+name: Compile solution
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restore and build projects (no load tests)
+        run: |
+          dotnet restore src/Portfolio.DemoApp/Portfolio.DemoApp.csproj
+          dotnet restore src/Portfolio.ApiLoadTests/Portfolio.ApiLoadTests.csproj
+          dotnet restore src/Portfolio.UiLoadTests/Portfolio.UiLoadTests.csproj
+          dotnet build src/Portfolio.DemoApp/Portfolio.DemoApp.csproj --no-restore --configuration Release
+          dotnet build src/Portfolio.ApiLoadTests/Portfolio.ApiLoadTests.csproj --no-restore --configuration Release
+          dotnet build src/Portfolio.UiLoadTests/Portfolio.UiLoadTests.csproj --no-restore --configuration Release

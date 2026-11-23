@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+.vs/
+.idea/
+.vscode/
+TestResults/
+nbomber-reports/
+nbomber-log-*
+*.user
+*.suo
+.DS_Store
+
+# Generated NBomber output; reports/ is curated and tracked
+**/nbomber-reports/
+**/nbomber-log-*

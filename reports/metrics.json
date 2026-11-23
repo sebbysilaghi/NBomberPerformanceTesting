@@ -1,0 +1,159 @@
+[
+  {
+    "id": "api-smoke",
+    "name": "Api Smoke",
+    "link": "reports/api-smoke-2026-11-23.html",
+    "total": 2006,
+    "fail": 0,
+    "ok": 2006,
+    "rps": 401.2,
+    "p50": 1.6,
+    "p95": 2.86,
+    "p99": 4.6,
+    "mean": 2.2,
+    "max": 788.75,
+    "steps": [
+      {
+        "name": "GET_products",
+        "count": 1003,
+        "p95": 2.36,
+        "p99": 4.32,
+        "mean": 2.34
+      },
+      {
+        "name": "POST_quote",
+        "count": 1003,
+        "p95": 3,
+        "p99": 4.61,
+        "mean": 2.05
+      }
+    ],
+    "session": "2026-11-23_08-10-55_5ff8db88",
+    "profile": [
+      {
+        "KeepConstant": [
+          1,
+          "00:00:05"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "api-steady",
+    "name": "Api Steady",
+    "link": "reports/api-steady-2026-11-23.html",
+    "total": 19700,
+    "fail": 0,
+    "ok": 19700,
+    "rps": 656.67,
+    "p50": 2.88,
+    "p95": 4.38,
+    "p99": 5.53,
+    "mean": 2.99,
+    "max": 349.59,
+    "steps": [
+      {
+        "name": "GET_products",
+        "count": 9850,
+        "p95": 4.33,
+        "p99": 5.51,
+        "mean": 2.98
+      },
+      {
+        "name": "POST_quote",
+        "count": 9850,
+        "p95": 4.42,
+        "p99": 5.56,
+        "mean": 3
+      }
+    ],
+    "session": "2026-11-23_08-11-40_43a942c1",
+    "profile": [
+      {
+        "KeepConstant": [
+          2,
+          "00:00:30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "api-burst",
+    "name": "Api Burst",
+    "link": "reports/api-burst-2026-11-23.html",
+    "total": 90,
+    "fail": 0,
+    "ok": 90,
+    "rps": 6,
+    "p50": 2.75,
+    "p95": 20.22,
+    "p99": 47.9,
+    "mean": 7.73,
+    "max": 270.3,
+    "steps": [
+      {
+        "name": "GET_products",
+        "count": 45,
+        "p95": 23.33,
+        "p99": 270.33,
+        "mean": 10.49
+      },
+      {
+        "name": "POST_quote",
+        "count": 45,
+        "p95": 16.78,
+        "p99": 41.92,
+        "mean": 4.98
+      }
+    ],
+    "session": "2026-11-23_08-12-28_2ecbd189",
+    "profile": [
+      {
+        "Inject": [
+          3,
+          "00:00:01",
+          "00:00:15"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui-browser",
+    "name": "Ui Browser",
+    "link": "reports/ui-browser-2026-11-23.html",
+    "total": 90,
+    "fail": 0,
+    "ok": 90,
+    "rps": 6,
+    "p50": 105.02,
+    "p95": 141.7,
+    "p99": 148.99,
+    "mean": 90.84,
+    "max": 667.48,
+    "steps": [
+      {
+        "name": "load_home_page",
+        "count": 45,
+        "p95": 146.3,
+        "p99": 667.65,
+        "mean": 134.01
+      },
+      {
+        "name": "search_mouse",
+        "count": 45,
+        "p95": 64.7,
+        "p99": 105.02,
+        "mean": 47.66
+      }
+    ],
+    "session": "2026-11-23_08-18-38_c790a404",
+    "profile": [
+      {
+        "KeepConstant": [
+          1,
+          "00:00:15"
+        ]
+      }
+    ]
+  }
+]
